@@ -40,7 +40,6 @@ class MarkdownExtractor(object):
             line_num += 1
             self._check_for_docblock_start(line)
             self._check_for_docblock_end(line)
-            line = docblock_formatter.reformat_line(line)
             
             if self._is_end_marker(line):
                 if markdown_found:
@@ -58,6 +57,7 @@ class MarkdownExtractor(object):
                     self.markdown_paragraphs.append("On line %i, markdown start-marker found when expecting an end-marker in file %s\n" % (line_num, filename))
                     
             elif markdown_found:
+                line = docblock_formatter.reformat_line(line)
                 line = self._remove_line_prefix(line)
                 paragraph = self._add_markdown_line_to_paragraph(line, paragraph)
 

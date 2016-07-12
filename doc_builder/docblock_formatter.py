@@ -28,18 +28,20 @@ class DocBlockFormatter(object):
         """
         if '@param' not in line:
             return line
-        
         line = line.replace('@param ', '')
         if self.params_section:
             return line
         else:
             self.params_section = True
-            return "__Parameters__\n%s" % line
+            self.tempx = "Y"
+            return "__Parameters:__\n%s" % line
 
     def _reformat_return(self, line):
-        self.params_section = False
-        return line.replace('@return', '__Returns__')
+        if '@return' in line:
+            self.params_section = False
+        return line.replace('@return', '__Returns:__')
 
     def _reformat_throws(self, line):
-        self.params_section = False
-        return line.replace('@throws', '__Throws__')
+        if '@throws' in line:
+            self.params_section = False
+        return line.replace('@throws', '__Throws:__')
