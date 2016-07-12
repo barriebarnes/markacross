@@ -7,7 +7,7 @@ For a given programme file containing MarkAcross, builds a file with all extract
 Gather all markdown for the specified file & write it to a markdown file in the same directory.
 
 __Parameters:__
-        string dirname
+string dirname
 string filename
 
 __Returns:__ string - markdown filename

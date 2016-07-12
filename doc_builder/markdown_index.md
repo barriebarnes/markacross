@@ -7,7 +7,7 @@ Create a markdown file containing an index comprising a list of handmade_markdow
 followed by a list of automatically generated markdown files and then a list of sub-directory indexes.
 
 __Parameters:__
-        string folder_path
+string folder_path
 list handmade_markdown_files - contains the filename of each manually created md file
 list auto_gen_markdown_files - contains the filename of each automatically generated md file
 list sub_directory_indexes - contains the filepath of an md index for each sub-folder with markdown

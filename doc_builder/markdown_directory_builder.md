@@ -12,7 +12,7 @@ Build an index linking to all markdown files. Return the index.
 Do this recursively adding the index of sub-directories to the parent directory's index.
 
 __Parameters:__
-        string dir_name
+string dir_name
 bool delete_only
 
 __Returns:__ string - filename of the markdown index for this directory

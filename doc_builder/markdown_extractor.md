@@ -16,7 +16,7 @@ As most Markdown will be indented to match the surrounding code, that indentatio
 As some Markdown will be contained with DocBlocks with a leading "*", this too is removed during extraction.
 DocBlock syntax is formatted appropriately
 __Parameters:__
-        string filename
+string filename
 
 __Returns:__ array - paragraphs of Markdown extracted from the given file
 

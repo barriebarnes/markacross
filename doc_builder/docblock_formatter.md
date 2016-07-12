@@ -7,7 +7,7 @@ Reformats text lines when formatted as part of a DocBlock
 Handles all lines beginning "param", "return" and "throws".
 Strips the "@", capitalises and emboldens the key word.
 __Parameters:__
-        string line
+string line
 
 __Returns:__ string - reformatted line
 
