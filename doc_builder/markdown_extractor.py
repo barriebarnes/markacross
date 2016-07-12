@@ -59,6 +59,7 @@ class MarkdownExtractor(object):
             elif markdown_found:
                 line = self._remove_line_prefix(line)
                 line = docblock_formatter.reformat_line(line)
+                line = line.replace("\n", "  \n")
                 paragraph = self._add_markdown_line_to_paragraph(line, paragraph)
 
         fileinput.close
@@ -150,4 +151,4 @@ class MarkdownExtractor(object):
         starting_spaces = match.group(1)
         starting_spaces = starting_spaces.replace("\t", "    ")
         return len(starting_spaces)
-        
+            

@@ -30,7 +30,7 @@ class DocBlockFormatter(object):
             return line
         line = line.replace('@param ', '')
         if self.params_section:
-            return line
+            return "%s  " % line
         else:
             self.params_section = True
             self.tempx = "Y"
